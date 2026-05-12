@@ -69,9 +69,9 @@ The approach was designed to remain consistent with the explainability constrain
 
 The provided baseline already models several nonlinear TX interaction terms of the form:
 
-[
+$$
 x^2 y^*
-]
+$$
 
 including multiple lagged versions.
 
@@ -85,9 +85,9 @@ fit_tx_prediction(...)
 
 This produces the first residual:
 
-[
+$$
 rx_1 = rx - \hat{I}_{TX}
-]
+$$
 
 ---
 
@@ -95,9 +95,9 @@ rx_1 = rx - \hat{I}_{TX}
 
 The baseline model was extended with additional cubic nonlinear features of the form:
 
-[
+$$
 x |x|^2
-]
+$$
 
 for each TX channel.
 
@@ -107,9 +107,9 @@ The filtered nonlinear features are stacked into a regression matrix and fitted 
 
 This produces an improved residual:
 
-[
+$$
 rx_2
-]
+$$
 
 with reduced TX-related interference.
 
@@ -181,9 +181,9 @@ This implementation already produced a significant improvement over the provided
 
 The method worked because it directly matched the structure described in the task statement:
 
-[
+$$
 I = F(TX) + E
-]
+$$
 
 where:
 
